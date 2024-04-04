@@ -53,7 +53,7 @@ npm test
 ## Setting up Azure DevOps
 
 ### Create an Azure DevOps project
-Log in to https://azure.microsoft.com/en-us/products/devops.
+Log in to https://dev.azure.com/
 
 Click on "Create project" and choose a name for your project (e.g., CIS470-DevOps-Activity).
 Select "Blank project" and choose private.
