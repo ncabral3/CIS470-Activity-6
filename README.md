@@ -148,7 +148,7 @@ The pipeline will first install dependencies, run tests, and then deploy the app
 
 ![drawing](./img/runPipeLine.png)
 
-## Rlease Pipeline
+## Release Pipeline
 
 In this step, you will release the pipeline. This will trigger the deployment of the app to the Azure App Service.
 
@@ -156,11 +156,12 @@ In this step, you will release the pipeline. This will trigger the deployment of
 
 You need to carefully set the configuration for the deployment, as a minor modification will not trigger a new deployment or will cause an error.
 
-The error could come from the Student ID or the App Service Name. If you experience errors and can not resolve it, the easiest way is to delete the pipeline and create a new one or deploy the app again. The last solution is to run the deploy from the Azure portal. Which is practically the same as the previous step.
+The error could come from the Student ID or the App Service Name. If you experience errors and can not resolve, the easiest way is to delete the pipeline and create a new one or deploy the app again. The last solution is to run the "deploy" from the Azure portal. Which is practically the same as the previous step.
 
-<video width="320" height="240" controls>
-  <source src="img/Release.mp4" type="video/mp4">
-</video>
+
+
+https://github.com/umassd-dataviz/CIS470-Activity-6/assets/119906645/2f40e0de-56ae-41ce-8604-fae29341c0d3
+
 
 ## Accessing the Deployed Application:
 
