@@ -5,13 +5,13 @@
 1. [Overview](#overview)
 2. [The Application](#the-application)
 3. [How to run locally](#how-to-run-locally)
-4. [Setting up Azure DevOps](#setting-up-azure-devops)
+4. [Configuring Azure App Service Deployment](#configuring-azure-app-service-deployment)
+5. [Setting up Azure DevOps](#setting-up-azure-devops)
     1. [Create an Azure DevOps project](#create-an-azure-devops-project)
     2. [Creating Work Boards](#creating-work-boards)
     3. [Defining Work Items](#defining-work-items)
     4. [Importing Code from GitHub](#importing-code-from-github)
     5. [Creating a Pipeline](#creating-a-pipeline)
-5. [Configuring Azure App Service Deployment](#configuring-azure-app-service-deployment)
 6. [Running the Pipeline and Deployment](#running-the-pipeline-and-deployment)
 7. [Accessing the Deployed Application](#accessing-the-deployed-application)
 8. [Conclusion](#conclusion)
@@ -50,6 +50,31 @@ npm test
 
 ![drawing](./img/triangleApp.png)
 
+
+## Configuring Azure App Service Deployment:
+
+You'll need an Azure App Service to deploy your web app. There are two ways to achieve this:
+
+You can refer to the video I have added to myCourses in Homework 4 for the steps.
+
+To create an App Service: Go to the Azure portal (https://azure.microsoft.com/en-us/get-started/azure-portal), 
+click on "App services" and create a new App Service.
+
+![drawing](./img/createAppService.png)
+
+The next step is making a Web App.
+
+![drawing](./img/createWebApp.png)
+
+The use the information below to create a Web App.
+
+![drawing](./img/createWebApp2.png)
+
+It may take a few minutes for the web app to be created.
+
+![drawing](./img/createWebApp3.png)
+
+
 ## Setting up Azure DevOps
 
 ### Create an Azure DevOps project
@@ -85,7 +110,10 @@ Select the "CIS470-Activity-6" repository and configure the import settings (e.g
 
 Go to Pipelines -> Releases.
 Click on New pipeline.
-Choose "Empty pipeline" and select your Azure DevOps repository.
+Choose "New pipeline" and select your Azure DevOps repository.
+
+<img src="./img/releasePipeline.png" width="500"/>
+
 In the YAML editor, paste the following code and customize it as needed:
 
 ```yaml
@@ -112,19 +140,27 @@ steps:
 
 ```
 
-## Configuring Azure App Service Deployment:
-
-You'll need an Azure App Service to deploy your web app. There are two ways to achieve this:
-
-You can refer to the video I have added to myCourses in Homework 4 for the steps.
-
-To create an App Service: Go to the Azure portal (https://azure.microsoft.com/en-us/get-started/azure-portal), create a new Web App resource, configure settings like resource group, location, and app service plan.
-
 ## Running the Pipeline and Deployment:
 
 Go back to your pipeline in Azure DevOps.
 Click on "Run pipeline".
 The pipeline will first install dependencies, run tests, and then deploy the app to the configured Azure App Service.
+
+![drawing](./img/runPipeLine.png)
+
+## Rlease Pipeline
+
+In this step, you will release the pipeline. This will trigger the deployment of the app to the Azure App Service.
+
+![drawing](./img/releasePipeline.png)
+
+You need to carefully set the configuration for the deployment, as a minor modification will not trigger a new deployment or will cause an error.
+
+The error could come from the Student ID or the App Service Name. If you experience errors and can not resolve it, the easiest way is to delete the pipeline and create a new one or deploy the app again. The last solution is to run the deploy from the Azure portal. Which is practically the same as the previous step.
+
+<video width="320" height="240" controls>
+  <source src="img/Release.mp4" type="video/mp4">
+</video>
 
 ## Accessing the Deployed Application:
 
