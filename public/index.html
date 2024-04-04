@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle App</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="/css/style.css"> 
+
+</head>
+<body>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/d3.js"></script>
+    <script src="/js/d3VizGen.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <h1>Triangle Checker</h1>
+        </div>
+    </row>
+    <div class="row">
+        <div class="col-md-6"><br><br><br>
+            <form id="triangleForm">
+                <label for="side1" class="form-check-label">Side 1:</label>
+                <input type="number" id="side1" name="side1" class="form-control" required>
+                <br>
+                <label for="side2" class="form-check-label">Side 2:</label>
+                <input type="number" id="side2" name="side2" class="form-control" required>
+                <br>
+                <label for="side3" class="form-check-label">Side 3:</label>
+                <input type="number" id="side3" name="side3" class="form-control" required>
+                <br>
+                <button type="submit" class="btn btn-primary">Check Triangle</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h2  class="text-center">Result</h2>
+            <div>Triangle type: <span class="result" id="result"></span></div>
+            
+            <div id="canvas"><svg width=400 height=400></svg></div>
+        </div>
+    </div>
+</div>
+    <script>
+        document.getElementById('triangleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const side1 = parseFloat(document.getElementById('side1').value);
+            const side2 = parseFloat(document.getElementById('side2').value);
+            const side3 = parseFloat(document.getElementById('side3').value);
+            drawTriangle("canvas",side1,side2,side3);
+
+            fetch('/check-triangle', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ side1, side2, side3 })
+            })
+            .then(response => response.json())
+            .then(data => {
+          
+                const resultDiv = document.getElementById('result');
+                console.log(data)
+                resultDiv.textContent =data.result
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+        
+    </script>
+
+</body>
+</html>
