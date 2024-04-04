@@ -1,0 +1,20 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: npm install
+  displayName: 'Install dependencies'
+
+- script: npm test
+  displayName: 'Run tests'
+
+- task: AzureRmWebappDeployment@v4
+  inputs:
+    azureSubscription: '$(SubscriptionId)'
+    resourceGroup: 'your-resource-group-name'  # Replace with your resource group name
+    appName: 'your-app-name'                 # Replace with your desired app name
+    packageLocation: '$(Build.ArtifactStagingDirectory)'
+    publishProfile: '$(Build.ArtifactStagingDirectory)/azure-app-service-publish.json'
