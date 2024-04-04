@@ -3,31 +3,28 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [How to run locally](#how-to-run-locally)
-3. [Setting up Azure DevOps](#setting-up-azure-devops)
+2. [The Application](#the-application)
+3. [How to run locally](#how-to-run-locally)
+4. [Setting up Azure DevOps](#setting-up-azure-devops)
     1. [Create an Azure DevOps project](#create-an-azure-devops-project)
     2. [Creating Work Boards](#creating-work-boards)
     3. [Defining Work Items](#defining-work-items)
     4. [Importing Code from GitHub](#importing-code-from-github)
     5. [Creating a Pipeline](#creating-a-pipeline)
-4. [Configuring Azure App Service Deployment](#configuring-azure-app-service-deployment)
-5. [Running the Pipeline and Deployment](#running-the-pipeline-and-deployment)
-6. [Accessing the Deployed Application](#accessing-the-deployed-application)
-7. [Conclusion](#conclusion)
-
-Setting Up Azure DevOps Project: #setting-up-azure-devops-project
-Creating Work Boards: #creating-work-boards
-Defining Work Items (User Stories, Bugs, Tasks): #defining-work-items-user-stories-bugs-tasks
-Importing Code from GitHub Repository: #importing-code-from-github-repository
-Creating a Pipeline for Build and Deployment: #creating-a-pipeline-for-build-and-deployment
-Configuring Azure App Service Deployment (Manual & Azure CLI options): #configuring-azure-app-service-deployment-manual-&-azure-cli-options
-Running the Pipeline and Deployment: #running-the-pipeline-and-deployment
-Accessing the Deployed Application: #accessing-the-deployed-application
+5. [Configuring Azure App Service Deployment](#configuring-azure-app-service-deployment)
+6. [Running the Pipeline and Deployment](#running-the-pipeline-and-deployment)
+7. [Accessing the Deployed Application](#accessing-the-deployed-application)
+8. [Conclusion](#conclusion)
 
 
 ## Overview
 In this Activity a pre-defined Triangle app (used for the Unit testing in Activity 3) is converted in to a web app. The objective of this activity is to use Azure DevOps Pipelines to build and deploy the web app. 
 The steps provided will will guide students through setting up a DevOps project in Azure DevOps (similar to what we discussed in the class/Slides), creating work boards for managing tasks (you can choose between Basic, Scrum and Agile), then use Kanban boards to manage tasks.It will also guide you through building and deploying a web app built with Express to Azure App Service.
+## The Application
+
+You can Fork this repository or download the source code from [here](https://github.com/umassdgithub/CIS470-Activity-6) and run it locally.
+
+In case you download the source code you will need to make a new GitHub repository and push the code to it.
 
 ## How to run locally
 
@@ -44,7 +41,12 @@ nodemon
 ```
 You should see the following output in browser: http://localhost:3000
 
-You should be able to see the triangle in the browser.
+You should be able to see the triangle in the browser.'
+
+You can also test the main function for the app using the following command:
+``` bash 
+npm test
+```
 
 ![drawing](./img/triangleApp.png)
 
@@ -54,18 +56,19 @@ You should be able to see the triangle in the browser.
 Log in to https://azure.microsoft.com/en-us/products/devops.
 
 Click on "Create project" and choose a name for your project (e.g., CIS470-DevOps-Activity).
-Select "Blank project" and choose the desired visibility (public or private).
+Select "Blank project" and choose private.
 
 ### Creating Work Boards:
 
 Navigate to Boards -> Boards.
 Click on New board.
-Choose "Agile" template and provide a name (e.g., CIS470-Activity-Board).
+Choose either "Basic", "Scrum" or "Agile" template and provide a name (e.g., CIS470-Activity-Board).
 
 ### Defining Work Items:
 
 Go to the newly created board and click on Columns.
-Add various columns representing different stages of your workflow (e.g., New Tasks, In Progress, Testing, Done).
+Add various columns representing different stages of your workflow (example: New Tasks, In Progress, Testing, Done).
+
 Click on Work items.
 Choose "Add work item type" and select the relevant types for your project (e.g., User Story, Bug, Task).
 Define the fields for each work item type (e.g., Title, Description, Assigned To).
