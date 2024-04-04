@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "test": "jest --verbose --coverage",
-    "build": "npm run build --prefix client",
+    "build": "npm run build --prefix client"
   },
   "repository": {
     "type": "git",
