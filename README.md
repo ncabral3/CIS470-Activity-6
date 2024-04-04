@@ -18,8 +18,8 @@
 
 
 ## Overview
-In this Activity a pre-defined Triangle app (used for the Unit testing in Activity 3) is converted in to a web app. The objective of this activity is to use Azure DevOps Pipelines to build and deploy the web app. 
-The steps provided will will guide students through setting up a DevOps project in Azure DevOps (similar to what we discussed in the class/Slides), creating work boards for managing tasks (you can choose between Basic, Scrum and Agile), then use Kanban boards to manage tasks.It will also guide you through building and deploying a web app built with Express to Azure App Service.
+In this Activity, a pre-defined Triangle app (used for the Unit testing in Activity 3) is converted into a web app. The objective of this activity is to use Azure DevOps Pipelines to build and deploy the web app. 
+The steps provided will guide students through setting up a DevOps project in Azure DevOps (similar to what we discussed in the class/Slides), creating workboards for managing tasks (you can choose between Basic, <a href="https://www.youtube.com/watch?v=Qoa5CS9JJPQ&t=8s&ab_channel=SCRUMstudy">Scrum</a>, and Agile), and then using Kanban boards to manage tasks. It will also guide you through building and deploying a web app built with Express to Azure App Service.
 ## The Application
 
 You can Fork this repository or download the source code from [here](https://github.com/umassd-dataviz/CIS470-Activity-6?tab=readme-ov-file) and run it locally.
@@ -28,7 +28,7 @@ In case you download the source code you will need to make a new GitHub reposito
 
 ## How to run locally
 
-The app provided is fully functional and you can run it in GitHub Codespaces or in the browser. To ran the app in the browser you need to have Node.js installed on your computer.
+The app provided is fully functional and you can run it in GitHub Codespaces or in the browser. To run the app in the browser you need to have Node.js installed on your computer.
 
 First install the following dependencies:
 ```bash
