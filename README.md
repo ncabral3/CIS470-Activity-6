@@ -10,11 +10,11 @@
     1. [Create an Azure DevOps project](#create-an-azure-devops-project)
     2. [Creating Work Boards](#creating-work-boards)
     3. [Defining Work Items](#defining-work-items)
-    4. [Importing Code from GitHub](#importing-code-from-github)
-    5. [Creating a Pipeline](#creating-a-pipeline)
-6. [Running the Pipeline and Deployment](#running-the-pipeline-and-deployment)
-7. [Accessing the Deployed Application](#accessing-the-deployed-application)
-8. [Conclusion](#conclusion)
+5. [Importing Code from GitHub](#importing-code-from-github)
+6. [Creating a Pipeline](#creating-a-pipeline)
+7. [Running the Pipeline and Deployment](#running-the-pipeline-and-deployment)
+8. [Accessing the Deployed Application](#accessing-the-deployed-application)
+9. [Conclusion](#conclusion)
 
 
 ## Overview
