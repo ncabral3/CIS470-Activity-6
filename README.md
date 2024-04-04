@@ -22,7 +22,7 @@ In this Activity a pre-defined Triangle app (used for the Unit testing in Activi
 The steps provided will will guide students through setting up a DevOps project in Azure DevOps (similar to what we discussed in the class/Slides), creating work boards for managing tasks (you can choose between Basic, Scrum and Agile), then use Kanban boards to manage tasks.It will also guide you through building and deploying a web app built with Express to Azure App Service.
 ## The Application
 
-You can Fork this repository or download the source code from [here](https://github.com/umassdgithub/CIS470-Activity-6) and run it locally.
+You can Fork this repository or download the source code from [here](https://github.com/umassd-dataviz/CIS470-Activity-6?tab=readme-ov-file) and run it locally.
 
 In case you download the source code you will need to make a new GitHub repository and push the code to it.
 

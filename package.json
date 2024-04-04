@@ -1,7 +1,7 @@
 {
-  "name": "activity-3-cis-470",
+  "name": "activity-6-cis-470",
   "version": "1.0.0",
-  "description": "## Program Functionality",
+  "description": "CIS 470 Activity 6",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/umassdgithub/Activity-3-CIS-470.git"
+    "url": "git+https://github.com/umassd-dataviz/CIS470-Activity-6.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/umassdgithub/Activity-3-CIS-470/issues"
+    "url": "https://github.com/umassd-dataviz/CIS470-Activity-6.git/issues"
   },
-  "homepage": "https://github.com/umassdgithub/Activity-3-CIS-470#readme",
+  "homepage": "https://github.com/umassd-dataviz/CIS470-Activity-6.git#readme",
   "devDependencies": {
     "jest": "^29.7.0",
     "nodemon": "^3.1.0"
