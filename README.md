@@ -24,13 +24,13 @@ The steps provided will guide students through setting up a DevOps project in Az
 
 You can Fork this repository or download the source code from [here](https://github.com/umassd-dataviz/CIS470-Activity-6?tab=readme-ov-file) and run it locally.
 
-In case you download the source code you will need to make a new GitHub repository and push the code to it.
+If you download the source code you will need to make a new GitHub repository and push the code to it.
 
 ## How to run locally
 
 The app provided is fully functional and you can run it in GitHub Codespaces or in the browser. To run the app in the browser you need to have Node.js installed on your computer.
 
-First install the following dependencies:
+First, install the following dependencies:
 ```bash
 npm install
 ```
@@ -39,11 +39,11 @@ Then run the following command:
 ```bash
 nodemon
 ```
-You should see the following output in browser: http://localhost:3000
+You should see the following output in the browser: http://localhost:3000
 
 You should be able to see the triangle in the browser.'
 
-You can also test the main function for the app using the following command:
+You can also test the main function of the app using the following command:
 ``` bash 
 npm test
 ```
@@ -66,7 +66,7 @@ The next step is making a Web App.
 
 ![drawing](./img/createWebApp.png)
 
-The use the information below to create a Web App.
+Use the information below to create a Web App.
 
 ![drawing](./img/createWebApp2.png)
 
@@ -87,12 +87,12 @@ Select "Blank project" and choose private.
 
 Navigate to Boards -> Boards.
 Click on New board.
-Choose either "Basic", "Scrum" or "Agile" template and provide a name (e.g., CIS470-Activity-Board).
+Choose either a "Basic", "Scrum" or "Agile" template and provide a name (e.g., CIS470-Activity-Board).
 
 ### Defining Work Items:
 
 Go to the newly created board and click on Columns.
-Add various columns representing different stages of your workflow (example: New Tasks, In Progress, Testing, Done).
+Add various columns representing different stages of your workflow (for example: New Tasks, In Progress, Testing, Done).
 
 Click on Work items.
 Choose "Add work item type" and select the relevant types for your project (e.g., User Story, Bug, Task).
@@ -109,7 +109,7 @@ Select the "CIS470-Activity-6" repository and configure the import settings (e.g
 ### Creating a Pipeline:
 
 Go to Pipelines -> Releases.
-Click on New pipeline.
+Click on New Pipeline.
 Choose "New pipeline" and select your Azure DevOps repository.
 
 <img src="./img/releasePipeline.png" width="500"/>
@@ -144,7 +144,7 @@ steps:
 
 Go back to your pipeline in Azure DevOps.
 Click on "Run pipeline".
-The pipeline will first install dependencies, run tests, and then deploy the app to the configured Azure App Service.
+The pipeline will install dependencies, run tests, and then deploy the app to the configured Azure App Service.
 
 ![drawing](./img/runPipeLine.png)
 
@@ -156,7 +156,7 @@ In this step, you will release the pipeline. This will trigger the deployment of
 
 You need to carefully set the configuration for the deployment, as a minor modification will not trigger a new deployment or will cause an error.
 
-The error could come from the Student ID or the App Service Name. If you experience errors and can not resolve, the easiest way is to delete the pipeline and create a new one or deploy the app again. The last solution is to run the "deploy" from the Azure portal. Which is practically the same as the previous step.
+The error could come from the Student ID or the App Service Name. If you experience errors and can not resolve them, the easiest way is to delete the pipeline and create a new one or deploy the app again. The last solution is to run the "deploy" from the Azure portal which is practically the same as the previous step.
 
 
 
